@@ -42,9 +42,8 @@ class Campeonato(models.Model):
     campeonatoequip = models.ManyToManyField('EquipoFut', through= 'CampeonatoEquip')
     
     def __str__(self):
-        return "%s - %s:" % (self.nombreC,
-                self.nombreAus,
-                self.campeonatoequip)
+        return "%s - %s :" % (self.nombreC,
+                self.nombreAus)
 
 class CampeonatoEquip(models.Model):
     
